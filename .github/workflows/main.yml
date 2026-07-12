@@ -38,6 +38,11 @@ jobs:
           path: main
           submodules: recursive
 
+      - name: Trust aws/tap (fix Homebrew tap trust)
+        run: |
+          brew tap aws/tap
+          brew trust aws/tap
+
       - name: Hide sensitive inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
         with:
